@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                android:id="@+id/tv_requests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="end"
+                android:text="@string/request"
+                android:textColor="@color/header_color"
+                android:textSize="@dimen/_15sdp" />
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/history"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <EditText
+                    android:id="@+id/et_search_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/search_bg"
+                    android:drawableStart="@drawable/ic_search"
+                    android:hint="@string/search_mobile"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:padding="@dimen/_7sdp"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/srlSwipeRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="0px"
+                android:layout_weight="1">
+
+                <com.lbit.fleetuat.scroll.MyNestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <com.lbit.fleetuat.scroll.MyViewPager
+                                android:id="@+id/vp_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:orientation="horizontal">
+
+                            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                                android:id="@+id/tvPrevious"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:drawableRight="@drawable/ic_icon_arrow_left"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:gravity="start"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                android:visibility="visible" />
+
+                            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                                android:id="@+id/tv_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:gravity="center"
+                                android:text="1 of 18"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp"
+                                android:visibility="visible" />
+
+
+                            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                                android:id="@+id/tvnext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_icon_arrow_right"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:gravity="end"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.lbit.fleetuat.scroll.MyNestedScrollView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+            android:id="@+id/tvNodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/no_data"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

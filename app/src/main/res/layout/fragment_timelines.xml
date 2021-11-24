@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/llScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type"
+                    android:textColor="@color/header_color"
+                    android:textSize="@dimen/_15sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/text_bg">
+
+                    <RadioGroup
+                        android:id="@+id/rg_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_vehicle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:buttonTint="@color/text_color"
+                            android:checked="true"
+                            android:padding="@dimen/_7sdp"
+                            android:text="@string/vehicle"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_part"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:buttonTint="@color/text_color"
+                            android:padding="@dimen/_7sdp"
+                            android:text="@string/part1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/from"
+                        android:textColor="@color/header_color"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:id="@+id/tvDateFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:drawableRight="@drawable/ic_calendar"
+                            android:hint="@string/date_hint"
+                            android:padding="@dimen/_7sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/to"
+                        android:textColor="@color/header_color"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_10sdp">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:id="@+id/tvDateTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/text_bg"
+                            android:drawableRight="@drawable/ic_calendar"
+                            android:hint="@string/date_hint"
+                            android:padding="@dimen/_7sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/part"
+                        android:textColor="@color/header_color"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tvPartType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/text_bg"
+                            android:padding="@dimen/_7sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/part_description"
+                        android:textColor="@color/header_color"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/textview_bg"
+                        android:orientation="horizontal">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:id="@+id/tvPartDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/_7sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llConsumedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/consumed_date"
+                        android:textColor="@color/header_color"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/textview_bg"
+                        android:orientation="horizontal">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:id="@+id/tvConsumedDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_7sdp"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_part_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                        android:id="@+id/tvIndent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="end"
+                        android:text="@string/indent"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_17sdp" />
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                        android:id="@+id/tvConsumption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/consumption"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_17sdp" />
+
+                </LinearLayout>
+
+                <include layout="@layout/layout_parts_indent" />
+
+                <include layout="@layout/layout_part_consumption" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vehicle1"
+                            android:textColor="@color/header_color"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/text_bg"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spVehicleNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_7sdp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llInductionDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_of_induction"
+                            android:textColor="@color/header_color"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/textview_bg"
+                            android:orientation="horizontal">
+
+                            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                                android:id="@+id/tvInductionDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/date_hint"
+                                android:padding="@dimen/_7sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray"
+                                android:textSize="@dimen/_15sdp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVehicleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vehicle"
+                            android:textColor="@color/header_color"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/textview_bg"
+                            android:orientation="horizontal">
+
+                            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                                android:id="@+id/tvVehicle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_7sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVehicleData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <com.lbit.fleetuat.scroll.MyViewPager
+                            android:id="@+id/vp_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFooter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                            android:id="@+id/tvPrevious"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/ic_icon_arrow_left"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:gravity="start"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="visible" />
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                            android:id="@+id/tvSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="visible" />
+
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                            android:id="@+id/tvNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_icon_arrow_right"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:gravity="end"
+                            android:text=""
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

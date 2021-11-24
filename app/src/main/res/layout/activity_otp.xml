@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                android:id="@+id/tv_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:textColor="@color/header_color"
+                        android:textSize="@dimen/_25sdp" />
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:text="Enter OTP"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp">
+
+                    <com.goodiebag.pinview.Pinview
+                        android:id="@+id/pinview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cursorVisible="false"
+                        app:forceKeyboard="false"
+                        app:hint=""
+                        app:inputType="number"
+                        app:password="false"
+                        app:pinBackground="@drawable/example_drawable_with_grey_disabled"
+                        app:pinHeight="@dimen/_40sdp"
+                        app:pinLength="4"
+                        app:pinWidth="50dp"
+                        app:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+
+                    android:layout_marginBottom="@dimen/_150sdp"
+                    android:orientation="horizontal">
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:id="@+id/tv_resend_timer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="00:00"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                        android:id="@+id/tv_resend_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Resend OTP"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_15sdp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/footer_bg"
+            android:orientation="vertical">
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/powered_by"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

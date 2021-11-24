@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">FMS UAT</string>
+    <string name="login">Login</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="enter_here">Enter Here</string>
+    <string name="enter_remarks">Enter Remarks</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="powered_by">\u00A9 LBIT Labs Pvt Ltd.</string>
+
+    <string name="service_status">Service Status</string>
+    <string name="request_a_service">Request a Service</string>
+    <string name="store_boy">Store Boy</string>
+    <string name="history">History</string>
+    <string name="request">Requests</string>
+    <string name="pending">Pending</string>
+    <string name="live">Live</string>
+    <string name="completed">Completed</string>
+    <string name="search_mobile">Search Mobile</string>
+    <string name="enter_reg">Enter Vehicle No</string>
+    <string name="enter_part">Enter Part</string>
+    <string name="enter_mobile">Enter Mobile</string>
+    <string name="your_vehicle">Your Vehicle</string>
+    <string name="fuel_left">Fuel Left(in liters)</string>
+    <string name="fuel_left1">Fuel Left</string>
+    <string name="vehicle_condition">Vehicle Condition</string>
+    <string name="request_id">Request Id</string>
+    <string name="request_date">Request Date</string>
+    <string name="grn_date">GRN Date</string>
+    <string name="grn_no">GRN Number</string>
+    <string name="grn_qty">GRN Qty</string>
+    <string name="avail_free_qty">Avail. Free Qty</string>
+    <string name="supplier">Supplier</string>
+    <string name="registration_no">Registration No</string>
+    <string name="jobcard_status">Status</string>
+    <string name="registration">Registration #</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="vehicle1">Vehicle #</string>
+    <string name="date_of_induction">Date Of Induction</string>
+    <string name="no_of_parts">No. Parts</string>
+    <string name="condition">Condition</string>
+    <string name="make">Make</string>
+    <string name="model">Model</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="kmsHMR">Kms/HMR</string>
+    <string name="start_kmsHMR">Start Kms/HMR</string>
+    <string name="parts_req">Parts Requested</string>
+    <string name="superior">Superior</string>
+    <string name="running">Running</string>
+    <string name="breakdown">Breakdown</string>
+    <string name="indent">Indent</string>
+    <string name="consumption">Consumption</string>
+    <string name="add_parts">Add Parts</string>
+    <string name="summary">Summary</string>
+    <string name="search_part_desc">Search Part</string>
+    <string name="part">Part #</string>
+    <string name="type">Type</string>
+    <string name="consumed_date">Consumed till Date</string>
+    <string name="part1">Part</string>
+    <string name="part_no">Part No</string>
+    <string name="bin_location">Bin Location</string>
+    <string name="site">Site</string>
+    <string name="avail_qty">Avail. Qty</string>
+    <string name="total_qty">Avail. Qty</string>
+    <string name="store_location">Location</string>
+    <string name="pickup_person">Pickup Person</string>
+    <string name="pickup_by">Pickup By</string>
+    <string name="contact">Contact #</string>
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="date_range">Date Range</string>
+    <string name="driver">Driver</string>
+    <string name="service_start">Service Start</string>
+    <string name="service_ends">Service End</string>
+    <string name="from">From</string>
+    <string name="date_hint">dd/mm/yyyy</string>
+    <string name="to">To</string>
+    <string name="qr_scan">QR Scan</string>
+    <string name="qr_scan_manual_text">Unable to Scan? Click Here</string>
+    <string name="confirm">Confirm</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="part_description">Part Description</string>
+    <string name="quantity">Quantity</string>
+    <string name="cost_of_prize">Cost Price(Per Unit)</string>
+    <string name="site_location">Location</string>
+    <string name="date">Date</string>
+    <string name="shift">Shift</string>
+    <string name="requested_by">Requested By</string>
+    <string name="submit">Submit</string>
+    <string name="no_data">No Data Found</string>
+    <string name="search_part">Part Number/ Description</string>
+    <string name="part_category">Part Category</string>
+    <string name="location">Location</string>
+    <string name="inspect">Inspect</string>
+    <string name="inspection_date">Inspection Date</string>
+    <string name="hsn">HSN</string>
+    <string name="suplier">Suplier</string>
+    <string name="mrp">MRP</string>
+    <string name="damages">Damages</string>
+    <string name="enter_atleast_3_digits">Enter Atleast 3 digits</string>
+
+    <string-array name="hi">
+        <item>Hi</item>
+        <item>Hel</item>
+        <item>Hello</item>
+    </string-array>
+
+    <string-array name="vehicle_condition">
+        <item>Select</item>
+        <item>Running</item>
+        <item>Breakdown</item>
+    </string-array>
+
+    <string-array name="damages">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>

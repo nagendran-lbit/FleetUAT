@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.lbit.fleetuat.scroll.MyNestedScrollView
+                android:id="@+id/nest_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_search_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_bg">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="start"
+                                        android:text="@string/search_part"
+                                        android:textColor="@color/header_color"
+                                        android:textSize="@dimen/_15sdp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/search_bg"
+                                        android:orientation="horizontal">
+
+                                        <AutoCompleteTextView
+                                            android:id="@+id/et_search_part"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_weight="1"
+                                            android:background="@null"
+                                            android:hint="@string/enter_atleast_3_digits"
+                                            android:imeOptions="actionSearch"
+                                            android:padding="@dimen/_10sdp"
+                                            android:text=""
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_15sdp" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:orientation="vertical">
+
+                                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start"
+                                        android:text="@string/make"
+                                        android:textColor="@color/header_color"
+                                        android:textSize="@dimen/_15sdp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/text_bg">
+
+                                        <Spinner
+                                            android:id="@+id/sp_make"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/_10sdp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:orientation="vertical">
+
+                                    <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start"
+                                        android:text="@string/location"
+                                        android:textColor="@color/header_color"
+                                        android:textSize="@dimen/_15sdp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/text_bg">
+
+                                        <Spinner
+                                            android:id="@+id/sp_location"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/_10sdp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_Parts_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <com.lbit.fleetuat.scroll.MyViewPager
+                                android:id="@+id/pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="@drawable/text_bg" />
+                        </LinearLayout>
+
+                        <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                            android:id="@+id/tvNodata"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/no_data"
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.lbit.fleetuat.scroll.MyNestedScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                android:id="@+id/ivprevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_icon_arrow_left"
+                android:gravity="left"
+                android:onClick="onClick" />
+
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                android:id="@+id/tvPagerCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <com.lbit.fleetuat.customfonts.MyTextViewPoppinsMedium
+                android:id="@+id/ivnext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_icon_arrow_right"
+                android:gravity="right"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
